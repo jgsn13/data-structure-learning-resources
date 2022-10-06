@@ -18,6 +18,28 @@ LinkedList *insert_linked_list(LinkedList *list, int value) {
     return linkedList;
 }
 
+LinkedList *insert_sorted_linked_list(LinkedList *list, int value) {
+    LinkedList *listNew = (LinkedList *)malloc(sizeof(LinkedList));
+    listNew->value = value;
+    if (list == NULL) {
+        listNew->next = NULL;
+        return listNew;
+    } else if (list->value == value) {
+        listNew->next = list;
+        return listNew;
+    } else {
+        LinkedList *listPrev = list;
+        LinkedList *listNext = list->next;
+        while (listNext != NULL && listNext->value < value) {
+            listPrev = listNext;
+            listNext = listNext->next;
+        }
+        listPrev->next = listNew;
+        listNew->next = listNext;
+        return list;
+    }
+}
+
 LinkedList *search_linked_list(LinkedList *list, int value) {
     LinkedList *listAux = list;
     while (listAux != NULL) {
@@ -73,7 +95,7 @@ void free_linked_list(LinkedList *list) {
 }
 
 int main() {
-    LinkedList * linkedList = create_linked_list();
+    LinkedList *linkedList = create_linked_list();
     linkedList = insert_linked_list(linkedList, 10);
     linkedList = insert_linked_list(linkedList, 20);
     linkedList = insert_linked_list(linkedList, 25);

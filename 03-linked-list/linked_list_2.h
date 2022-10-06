@@ -9,6 +9,9 @@ int empty_linked_list(LinkedList *list);
 /* Insert an element at the beginnig of a linked list */
 LinkedList *insert_linked_list(LinkedList *list, int value);
 
+/* Insert an element by sorting the existing elements */
+LinkedList *insert_sorted_linked_list(LinkedList *list, int value);
+
 /* Search for an element in a linked list */
 LinkedList *search_linked_list(LinkedList *list, int value);
 

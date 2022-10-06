@@ -29,3 +29,6 @@ LinkedList *remove_linked_list_recursively(LinkedList *list, int value);
 
 /* Releases the memory allocated by a linked list */
 void free_linked_list(LinkedList *list);
+
+/* Releases the memory allocated by a linked list recursively */
+void free_linked_list_recursively(LinkedList *list);

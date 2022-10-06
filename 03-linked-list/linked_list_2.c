@@ -121,6 +121,13 @@ void free_linked_list(LinkedList *list) {
     }
 }
 
+void free_linked_list_recursively(LinkedList *list) {
+    if (!empty_linked_list(list)) {
+        free_linked_list_recursively(list->next);
+        free(list);
+    }
+}
+
 int main() {
     LinkedList *linkedList = create_linked_list();
     linkedList = insert_linked_list(linkedList, 10);

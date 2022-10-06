@@ -24,5 +24,8 @@ void print_linked_list_recursively(LinkedList *list);
 /* Removes an element from a linked list */
 LinkedList *remove_linked_list(LinkedList *list, int value);
 
+/* Removes an element from a linked list recursively */
+LinkedList *remove_linked_list_recursively(LinkedList *list, int value);
+
 /* Releases the memory allocated by a linked list */
 void free_linked_list(LinkedList *list);

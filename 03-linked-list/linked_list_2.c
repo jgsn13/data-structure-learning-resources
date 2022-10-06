@@ -98,6 +98,20 @@ LinkedList *remove_linked_list(LinkedList *list, int value) {
     return list;
 }
 
+LinkedList *remove_linked_list_recursively(LinkedList *list, int value) {
+    if (!empty_linked_list(list)) {
+        if (list->value == value) {
+            LinkedList *listAux = list;
+            list = list->next;
+            free(listAux);
+        } else {
+            // NOTE: list->next because of the link
+            list->next = remove_linked_list_recursively(list->next, value);
+        }
+    }
+    return list;
+}
+
 void free_linked_list(LinkedList *list) {
     LinkedList *listNext;
     while (list != NULL) {

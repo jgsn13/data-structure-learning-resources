@@ -27,6 +27,9 @@ LinkedList *remove_linked_list(LinkedList *list, int value);
 /* Removes an element from a linked list recursively */
 LinkedList *remove_linked_list_recursively(LinkedList *list, int value);
 
+/* Verify if two linked lists are equal recursively */
+int equal_linked_lists_recursively(LinkedList *list1, LinkedList *list2);
+
 /* Releases the memory allocated by a linked list */
 void free_linked_list(LinkedList *list);
 

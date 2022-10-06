@@ -112,6 +112,17 @@ LinkedList *remove_linked_list_recursively(LinkedList *list, int value) {
     return list;
 }
 
+int equal_linked_lists_recursively(LinkedList *list1, LinkedList *list2) {
+    if (empty_linked_list(list1) && empty_linked_list(list2)) {
+        return 1;
+    } else if (empty_linked_list(list1) || empty_linked_list(list2)) {
+        return 0;
+    } else {
+        return (list1->value == list2->value &&
+                equal_linked_lists_recursively(list1->next, list2->next));
+    }
+}
+
 void free_linked_list(LinkedList *list) {
     LinkedList *listNext;
     while (list != NULL) {

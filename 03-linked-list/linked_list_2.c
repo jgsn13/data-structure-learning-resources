@@ -59,6 +59,19 @@ void print_linked_list(LinkedList *list) {
     }
 }
 
+void print_linked_list_recursively(LinkedList *list) {
+    if (empty_linked_list(list)) {
+        return;
+    } else {
+        printf("Info = %d\n", list->value);
+        print_linked_list_recursively(list->next);
+
+        // NOTE: the following code should prints the list in reverse order
+        // print_linked_list_recursively(list->next);
+        // printf("Info = %d\n", list->value);
+    }
+}
+
 LinkedList *remove_linked_list(LinkedList *list, int value) {
     if (list != NULL) {
         LinkedList *listAux = list->next;

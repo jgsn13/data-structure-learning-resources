@@ -18,6 +18,9 @@ LinkedList *search_linked_list(LinkedList *list, int value);
 /* Prints a linked list */
 void print_linked_list(LinkedList *list);
 
+/* Prints a linked list recursively */
+void print_linked_list_recursively(LinkedList *list);
+
 /* Removes an element from a linked list */
 LinkedList *remove_linked_list(LinkedList *list, int value);
 

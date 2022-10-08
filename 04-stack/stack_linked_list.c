@@ -67,3 +67,19 @@ void free_stack(Stack *stack) {
     }
     free(stack);
 }
+
+int main() {
+    Stack stack1;
+
+    LinkedList list1;
+    list1.value = 2;
+    list1.next = NULL;
+    stack1.first = &list1;
+
+    LinkedList list2;
+    list2.value = 4;
+    list2.next = &list1;
+    stack1.first = &list2;
+
+    return 0;
+}

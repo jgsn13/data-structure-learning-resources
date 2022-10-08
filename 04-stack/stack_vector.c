@@ -4,10 +4,10 @@
 
 #define MAX 3
 
-typedef struct stack {
+struct stack {
     int n;
     int v[MAX];
-} Stack;
+};
 
 Stack *create_stack() {
     Stack *stack = (Stack *)malloc(sizeof(Stack));

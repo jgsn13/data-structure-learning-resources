@@ -15,13 +15,13 @@ int main() {
     scanf("%d", &n);
     v = (float *)malloc(n * sizeof(float));
     if (v == NULL) {
-        printf("Insufficient memory");
+        printf("Insufficient memory\n");
         exit(1);
     }
     for (int i = 0; i < n; i++)
         scanf("%f", &v[i]);
     s = summation(n, v);
-    printf("summation=%.1f, mean=%.1f", s, s / n);
+    printf("summation=%.1f, mean=%.1f\n", s, s / n);
     free(v);
     return 0;
 }

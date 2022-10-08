@@ -11,7 +11,7 @@ void catch(struct point *pp) {
 }
 
 void prints(struct point *pp) {
-    printf("Point(%.2f, %.2f)", pp->x, pp->y);
+    printf("Point(%.2f, %.2f)\n", pp->x, pp->y);
 }
 
 int main() {

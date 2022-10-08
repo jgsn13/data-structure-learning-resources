@@ -10,6 +10,6 @@ float summation(int m, float v[]) {
 int main() {
     float v[] = {2.0, 3.0, 4.0};
     float s = summation(3, v);
-    printf("summation=%.1f, mean=%.1f", s, s / 3);
+    printf("summation=%.1f, mean=%.1f\n", s, s / 3);
     return 0;
 }

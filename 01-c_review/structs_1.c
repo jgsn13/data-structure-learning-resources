@@ -9,7 +9,7 @@ int main() {
     struct point p;
     printf("Enter point coordinates (x, y):\n");
     scanf("%f %f", &p.x, &p.y);
-    printf("Point(%.2f, %.2f)", p.x, p.y);
+    printf("Point(%.2f, %.2f)\n", p.x, p.y);
 
     // How to user pointer variables?
     struct point *pp;

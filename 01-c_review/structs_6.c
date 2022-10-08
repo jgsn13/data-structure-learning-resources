@@ -41,7 +41,7 @@ void update(int n, Student **students, int i) {
     if (students[i] == NULL) {
         students[i] = (Student *)malloc(sizeof(Student));
         if (students[i] == NULL) {
-            printf("Insufficient memory");
+            printf("Insufficient memory\n");
             exit(1);
         }
     }
@@ -76,7 +76,7 @@ int main() {
     scanf("%d", &n);
     students = (Student **)malloc(n * sizeof(Student *));
     if (students == NULL) {
-        printf("Insufficient memory");
+        printf("Insufficient memory\n");
         exit(1);
     }
     init(n, students);

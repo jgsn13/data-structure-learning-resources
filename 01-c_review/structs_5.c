@@ -59,7 +59,7 @@ int main() {
     scanf("%d", &n);
     students = (Student *)malloc(n * sizeof(Student));
     if (students == NULL) {
-        printf("Insufficient memory");
+        printf("Insufficient memory\n");
         exit(1);
     }
     init(n, students);

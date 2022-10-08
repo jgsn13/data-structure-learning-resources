@@ -19,7 +19,7 @@ float point_distance(Point *p1, Point *p2);
 Point *create_point(float x, float y) {
     Point *p = (Point *)malloc(sizeof(Point));
     if (p == NULL) {
-        printf("Insufficient memory");
+        printf("Insufficient memory\n");
         exit(1);
     }
     p->x = x;

@@ -37,7 +37,7 @@ BBTree *insert_bbtree(BBTree *tree, int c) {
     } else if (tree->info > c) {
         tree->left = insert_bbtree(tree->left, c);
     } else if (tree->info < c) {
-        tree->left = insert_bbtree(tree->right, c);
+        tree->right = insert_bbtree(tree->right, c);
     } else {
         printf("Elemento já pertence à árvore\n");
     }
